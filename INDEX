@@ -1,0 +1,21 @@
+ac                      Clustering coefficients from package cluster.
+bank                    Swiss bank notes data
+body                    Exploring Relationships in Body Dimensions
+colpairs                Applies a function to all pairs of columns
+diameter                Cluster heterogeneity of 2-d data
+dmat.color              Colors a matrix
+reorder.hclust          Reorders object order of hclust, keeping
+                        objects within a cluster contiguous to each
+                        other.
+order.single            Orders objects using hierarchical clustering
+order.clusters          Orders clustered objects using hierarchical
+                        clustering
+ozone                   Ozone data from Breiman and Friedman, 1985
+pairs.bg                Enhanced scatterplot matrix
+parcoord.bg             Enhanced parallel coordinate plot
+partition.crit          Combines the results of appplying an index to
+                        each group of observations
+pclen                   Profile smoothness measures
+plot.colors             Plots a matrix of colors
+vec2distm               Various utility functions
+wine                    Wine recognition data
