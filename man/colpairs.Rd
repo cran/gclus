@@ -39,9 +39,9 @@ state.col <- dmat.color(state.m)
 
 
 layout(matrix(1:2,nrow=1,ncol=2))
-parcoord.bg(state.x77, panel.color= state.col)
+cparcoord(state.x77, panel.color= state.col)
 # Get rid of the panels with lots of line crossings (yellow) by reorderings
-parcoord.bg(state.x77, order.endlink(state.m), state.col)
+cparcoord(state.x77, order.endlink(state.m), state.col)
 layout(matrix(1,1))
 
 
@@ -52,7 +52,7 @@ o<- order.single(m)
 pcols = dmat.color(m)
 # Color panels by level of m and reorder variables so that
 # pairs with high m are near the diagonal.
-pairs.bg(state.x77,order=o, panel.colors=pcols)
+cpairs(state.x77,order=o, panel.colors=pcols)
 
 # In this case panels showing either of Area or Population
 # exhibit the most clumpiness because these variables

@@ -1,5 +1,5 @@
-\name{pairs.bg}
-\alias{pairs.bg}
+\name{cpairs}
+\alias{cpairs}    
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{ Enhanced scatterplot matrix }
 \description{
@@ -7,7 +7,7 @@ This function draws a scatterplot matrix of data. Variables
 may be reordered and panels colored in the display.
 }
 \usage{
-pairs.bg(data, order = NULL, panel.colors = NULL, border.color = "grey70", show.points = TRUE, ...)
+cpairs(data, order = NULL, panel.colors = NULL, border.color = "grey70", show.points = TRUE, ...)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -27,7 +27,7 @@ pairs.bg(data, order = NULL, panel.colors = NULL, border.color = "grey70", show.
 Data'', to appear in JCGS. }
 \author{ Catherine B. Hurley }
 %\note{ ~~further notes~~ }
-\seealso{\code{\link{pairs}}, \code{\link{parcoord.bg}}, 
+\seealso{\code{\link{pairs}}, \code{\link{cparcoord}}, 
 \code{\link{dmat.color}},\code{\link{colpairs}}, \code{\link{order.single}}.}
 \examples{
 
@@ -35,11 +35,11 @@ data(USJudgeRatings)
 judge.cor <- cor(USJudgeRatings)
 judge.color <- dmat.color(judge.cor)
 # Colors variables by their correlation.
-pairs.bg(USJudgeRatings,panel.colors=judge.color,pch=".",gap=.5)
+cpairs(USJudgeRatings,panel.colors=judge.color,pch=".",gap=.5)
 judge.o <- order.single(judge.cor)
 # Reorder variables so that those with highest correlation 
 # are close to the  diagonal.
-pairs.bg(USJudgeRatings,judge.o,judge.color,pch=".",gap=.5)
+cpairs(USJudgeRatings,judge.o,judge.color,pch=".",gap=.5)
 
 # Specify your own color scheme
 judge.color <- dmat.color(judge.cor, breaks=c(-1,0,.5,.9,1), colors = 
@@ -53,7 +53,7 @@ m <- -colpairs(scale(bank[,-1]), partition.crit,gfun=gave,groups=bank[,1])
 # pairs with high m are near the diagonal. Panels shown
 # in pink have the highest amount of group homogeneity, as measured by 
 # gave.
-pairs.bg(bank[,-1],order=order.single(m), panel.colors=dmat.color(m),
+cpairs(bank[,-1],order=order.single(m), panel.colors=dmat.color(m),
 gap=.3,col=c("purple","black")[bank[,"Status"]+1],
 pch=c(5,3)[bank[,"Status"]+1])
 

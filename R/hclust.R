@@ -30,9 +30,9 @@ function(merit,reorder=TRUE,...) {
 #  merge of the hierarchical clustering
 
 reorder.hclust <-
-function(hc,dis) {
+function(x,dis,...) {
     if (! is.matrix(dis)) dis <- as.matrix(dis)
-    merges <- hc$merge
+    merges <- x$merge
     n <- nrow(merges)
     endpoints <- matrix(0,n,2)
     dir <- matrix(1,n,2)
@@ -120,10 +120,10 @@ function(hc,dis) {
 	clusters[[i]] <- c(clusters[[j]],-k)
 	else clusters[[i]] <- c(clusters[[j]], clusters[[k]])}
     
-    hc1 <- hc
-    hc1$merge <- merges
-    hc1$order <- clusters[[n]]
-    hc1
+    x1 <- x
+    x1$merge <- merges
+    x1$order <- clusters[[n]]
+    x1
     
     
 }

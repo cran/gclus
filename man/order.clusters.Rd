@@ -54,7 +54,7 @@ cmat <- dmat.color(as.matrix(state.d), rev(cm.colors(5)))
 
 op <- par(mar=c(1,6,1,1))
 rlabels <- state.name[state.o]
-plot.colors(cmat[state.o,state.o], rlabels=rlabels)
+plotcolors(cmat[state.o,state.o], rlabels=rlabels)
 par(op)
 
 
@@ -68,11 +68,11 @@ state.o <- unlist(memship2clus(state.km))
 layout(matrix(1:2,nrow=1,ncol=2),widths=c(0.1,1))
 op <- par(mar=c(1,1,1,.2))
 state.colors <- cbind(state.km,state.km)
-plot.colors(state.colors[state.o,])
+plotcolors(state.colors[state.o,])
 
 par(mar=c(1,6,1,1))
 rlabels <- state.name[state.o]
-plot.colors(cmat[state.o,state.o], rlabels=rlabels)
+plotcolors(cmat[state.o,state.o], rlabels=rlabels)
 
 par(op)
 layout(matrix(1,1))
@@ -89,11 +89,11 @@ state.o <- order.clusters(-state.d, state.km)
 layout(matrix(1:2,nrow=1,ncol=2),widths=c(0.1,1))
 op <- par(mar=c(1,1,1,.2))
 state.colors <- cbind(state.km,state.km)
-plot.colors(state.colors[state.o,])
+plotcolors(state.colors[state.o,])
 
 par(mar=c(1,6,1,1))
 rlabels <- state.name[state.o]
-plot.colors(cmat[state.o,state.o], rlabels=rlabels)
+plotcolors(cmat[state.o,state.o], rlabels=rlabels)
 
 par(op)
 layout(matrix(1,1))

@@ -6,12 +6,13 @@ contiguous to each other. }
 Reorders objects so that  nearby object pairs are adjacent.
 }
 \usage{
-reorder.hclust(hc,dis)
+reorder.hclust(x,dis,...)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{hc}{is the result of \code{hclust}.}
+  \item{x}{is the result of \code{hclust}.}
   \item{dis}{is a distance matrix or \code{dist}.}  
+  \item{...}{additional arguments.}  
 }
 \details{ 
 In hierarchical cluster displays, a decision is needed at 
@@ -66,9 +67,9 @@ layout(matrix(1,1))
 layout(matrix(1:2,nrow=2,ncol=1))
 op <- par(mar=c(1,6,1,1))
 cmat <- dmat.color(eurodist, rev(cm.colors(5)))
-plot.colors(cmat[hc$order,hc$order], rlabels=labels(eurodist)[hc$order])
+plotcolors(cmat[hc$order,hc$order], rlabels=labels(eurodist)[hc$order])
 
-plot.colors(cmat[hc1$order,hc1$order], rlabels=labels(eurodist)[hc1$order])
+plotcolors(cmat[hc1$order,hc1$order], rlabels=labels(eurodist)[hc1$order])
 
 layout(matrix(1,1))
 par(op)

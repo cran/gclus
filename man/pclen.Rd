@@ -34,7 +34,7 @@ Data'', to appear in JCGS. }
 \author{ Catherine B. Hurley }
 %\note{ ~~further notes~~ }
 
-\seealso{\code{\link{parcoord.bg}}, 
+\seealso{\code{\link{cparcoord}}, 
 \code{\link{colpairs}}, \code{\link{order.endlink}}.}
 
 \examples{
@@ -48,9 +48,9 @@ mins <- apply(state.x77,2,min)
 ranges <- apply(state.x77,2,max) - mins
 state.m <- -colpairs(scale(state.x77,mins,ranges), pclen)
 state.col <- dmat.color(state.m)
-parcoord.bg(state.x77, panel.color= state.col)
+cparcoord(state.x77, panel.color= state.col)
 # Get rid of the panels with long line segments (yellow) by reordering:
-parcoord.bg(state.x77, order.endlink(state.m), state.col)
+cparcoord(state.x77, order.endlink(state.m), state.col)
 
 }
 \keyword{hplot}

@@ -2,7 +2,7 @@
 \alias{dmat.color}
 \alias{default.dmat.color}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{ Colors a matrix}
+\title{ Colors a symmetric matrix}
 \description{
   Accepts a dissimilarity matrix or \code{dist} \code{m}, and
      returns a  matrix of colors.
@@ -38,7 +38,7 @@ there are \code{breaks} equal-sized categories.}
 
 % ~Make other sections like Warning with \section{Warning }{....} ~
 
-\seealso{ \code{\link{cut}}, \code{\link{pairs.bg}}, \code{\link{parcoord.bg}}}
+\seealso{ \code{\link{cut}}, \code{\link{cpairs}}, \code{\link{cparcoord}}}
 \examples{
 data(longley)
 longley.cor <- cor(longley)
@@ -46,7 +46,7 @@ longley.cor <- cor(longley)
 longley.color <- dmat.color(longley.cor)
 
 # Plot the colors
-plot.colors(longley.color,dlabels=rownames(longley.color))
+plotcolors(longley.color,dlabels=rownames(longley.color))
 
 # Try different color schemes
 
@@ -66,8 +66,8 @@ longley.color <- longley.color[longley.o,longley.o]
 # The colors can be used in a scatterplot matrix or parallel
 # coordinate display:
 
-pairs.bg(longley, panel.color= longley.color)
-parcoord.bg(longley, panel.color= longley.color)
+cpairs(longley, panel.color= longley.color)
+cparcoord(longley, panel.color= longley.color)
 
 }
 \keyword{multivariate }

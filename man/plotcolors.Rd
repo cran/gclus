@@ -1,22 +1,22 @@
-\name{plot.colors}
-\alias{plot.colors}
-\alias{image.info}
+\name{plotcolors}
+\alias{plotcolors}
+\alias{imageinfo}
 
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{Plots a matrix of colors}
 \description{
-\code{plot.colors} plots a matrix of colors 
+\code{plotcolors} plots a matrix of colors 
 as an image or as points.
 
-\code{image.info} is a utility that given a matrix of colors,
+\code{imageinfo} is a utility that given a matrix of colors,
 returns a structure useful for the \code{image} function.
 
-}
+} 
 \usage{
-plot.colors(cmat, na.color = "white", dlabels = NULL, rlabels = FALSE, clabels = FALSE, 
+plotcolors(cmat, na.color = "white", dlabels = NULL, rlabels = FALSE, clabels = FALSE, 
 ptype = "image", border.color = "grey70", pch = 15, cex = 3, label.cex = 0.6, ...)
 
-image.info(cmat)
+imageinfo(cmat)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -35,11 +35,11 @@ image.info(cmat)
 }
 
 \value{
-  \code{cmat} returns a list with components:
-\item{x} vector of x coordinates.
-\item{y} vector of y coordinates.
-\item{z} a matrix containing values to be plotted.
-\item{col} the colors to be used.
+  \code{imageinfo} returns a list with components:
+\item{x}{a vector of x coordinates.}
+\item{y}{a vector of y coordinates.}
+\item{z}{a matrix containing values to be plotted.}
+\item{col}{the colors to be used.}
 }
 
 \author{ Catherine B. Hurley }
@@ -49,11 +49,11 @@ image.info(cmat)
 
 \examples{
 
-plot.colors(matrix(1:20,nrow=4,ncol=5))
+plotcolors(matrix(1:20,nrow=4,ncol=5))
 
-plot.colors(matrix(1:20,nrow=4,ncol=5),ptype="points",cex=6)
+plotcolors(matrix(1:20,nrow=4,ncol=5),ptype="points",cex=6)
 
-plot.colors(matrix(1:20,nrow=4,ncol=5),rlabels = c("a","b","c","d"))
+plotcolors(matrix(1:20,nrow=4,ncol=5),rlabels = c("a","b","c","d"))
 
 
 data(longley)
@@ -62,14 +62,14 @@ longley.cor <- cor(longley)
 longley.color <- dmat.color(longley.cor)
 
 
-plot.colors(longley.color, dlabels=rownames(longley.color))
+plotcolors(longley.color, dlabels=rownames(longley.color))
 
 # Could also reorder variables prior to plotting:
 longley.o <- order.single(longley.cor)
 longley.color <- longley.color[longley.o,longley.o]
 
 op <- par(mar=c(1,6,6,1))
-plot.colors(longley.color,rlabels=rownames(longley.color),clabels=rownames(longley.color) )
+plotcolors(longley.color,rlabels=rownames(longley.color),clabels=rownames(longley.color) )
 par(op)
 
 }

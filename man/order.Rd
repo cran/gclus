@@ -61,9 +61,9 @@ Gruvaeus, G. and Wainer, H. (1972),
  }
 \author{ Catherine B. Hurley }
 %\note{ ~~further notes~~ }
-\seealso{\code{\link{pairs.bg}}, 
-\code{\link{parcoord.bg}},\code{\link{plot.colors}}, 
-\code{\link{reorder.hclust}}, \code{\link{hclust}}.}
+\seealso{\code{\link{cpairs}}, 
+\code{\link{cparcoord}},\code{\link{plotcolors}}, 
+\code{\link{reorder.hclust}},\code{\link{order.clusters}}, \code{\link{hclust}}.}
 \examples{
 data(state)
 state.cor <- cor(state.x77)
@@ -73,8 +73,8 @@ order.hclust(state.cor,method="average")
 
 # Use for plotting...
 
-pairs.bg(state.x77, panel.colors=dmat.color(state.cor), order.single(state.cor),pch=".",gap=.4)
-parcoord.bg(state.x77, order.endlink(state.cor),panel.colors=dmat.color(state.cor))
+cpairs(state.x77, panel.colors=dmat.color(state.cor), order.single(state.cor),pch=".",gap=.4)
+cparcoord(state.x77, order.endlink(state.cor),panel.colors=dmat.color(state.cor))
 
 
 # Order the states instead of the variables...
@@ -84,7 +84,7 @@ state.o <- order.single(-state.d)
 
 op <- par(mar=c(1,6,1,1))
 cmat <- dmat.color(as.matrix(state.d), rev(cm.colors(5)))
-plot.colors(cmat[state.o,state.o], rlabels=state.name[state.o])
+plotcolors(cmat[state.o,state.o], rlabels=state.name[state.o])
 par(op)
 
 

@@ -72,7 +72,7 @@ function(m, colors = default.dmat.color,byrank=NULL, breaks=length(colors) ){
 # Extracts information from a matrix of colors suitable for use by
 # image.
 # 
-image.info <- function(cmat) {
+imageinfo <- function(cmat) {
     n <- nrow(cmat)    
     p <- ncol(cmat) 
     levels <- sort(unique(as.vector(cmat)))
@@ -80,19 +80,19 @@ image.info <- function(cmat) {
     z <- matrix(z,nrow=n,p)
     list(x=1:p,y=1:n, z =t(z),col=levels)
 }
-
+ 
 
 # This draws the color matrix cmat.
 
 
-plot.colors <- function(cmat,  na.color="white", dlabels = NULL, rlabels = FALSE, clabels = FALSE, 
+plotcolors <- function(cmat,  na.color="white", dlabels = NULL, rlabels = FALSE, clabels = FALSE, 
     ptype ="image", border.color = "grey70", pch=15,cex=3,label.cex = .6,...) {
         
     n <- nrow(cmat)    
     p <- ncol(cmat) 
     cmat[is.na(cmat)] <- na.color
     if (ptype=="image") {
-	info <- image.info(cmat)
+	info <- imageinfo(cmat)
 	image(info$x, info$y, info$z[, n:1], col = info$col, 
 	    axes = FALSE, xlab = "", ylab = "", ...)}
     else {
@@ -124,7 +124,7 @@ plot.colors <- function(cmat,  na.color="white", dlabels = NULL, rlabels = FALSE
 # panel.colors, if present should be a matrix of panel colors.
 # (...) are graphical parameters.
 
-pairs.bg <-
+cpairs <-
 function(data,order=NULL,panel.colors=NULL,border.color="grey70",show.points=TRUE,...) {
     textPanelbg <- function(x = 0.5, y = 0.5, txt, cex, font) {
 	box(col= border.color)
@@ -169,7 +169,7 @@ function(data,order=NULL,panel.colors=NULL,border.color="grey70",show.points=TRU
 # This function is adapted from parcoord(MASS).
 
 
-parcoord.bg <-
+cparcoord <-
 function (data, order=NULL,panel.colors=NULL,col=1,lty=1,horizontal=FALSE,mar=NULL,...) {
     if (is.null(mar))
        if (horizontal==TRUE)

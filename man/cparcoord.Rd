@@ -1,13 +1,14 @@
-\name{parcoord.bg}
-\alias{parcoord.bg}
+\name{cparcoord}
+\alias{cparcoord}   
 
 \title{Enhanced parallel coordinate plot }
 \description{
 This function draws a parallel coordinate plot of data. Variables
-may be reordered and panels colored in the display.
+may be reordered and panels colored in the display. It is a modified
+version of \code{parcoord {MASS}}.
 }
 \usage{
-parcoord.bg(data, order = NULL, panel.colors = NULL, col = 1, lty = 1, horizontal = FALSE, mar = NULL, ...)
+cparcoord(data, order = NULL, panel.colors = NULL, col = 1, lty = 1, horizontal = FALSE, mar = NULL, ...)
 }
 
 \arguments{
@@ -31,7 +32,7 @@ recycled as necessary for each observation.  }
 Data'', to appear in JCGS. }
 \author{ Catherine B. Hurley }
 
-\seealso{\code{\link{pairs.bg}}, 
+\seealso{\code{\link{cpairs}}, \code{\link{parcoord}},
 \code{\link{dmat.color}}, \code{\link{colpairs}}, \code{\link{order.endlink}}.}
 \examples{
 data(state)
@@ -42,9 +43,9 @@ function(x,y)  cor.test(x,y,"two.sided","kendall")$estimate, diag=1)
 
 state.col <- dmat.color(state.m)
 
-parcoord.bg(state.x77, panel.color= state.col)
+cparcoord(state.x77, panel.color= state.col)
 # Get rid of the panels with lots of line crossings (yellow) by reordering:
-parcoord.bg(state.x77, order.endlink(state.m), state.col)
+cparcoord(state.x77, order.endlink(state.m), state.col)
 
 # To get rid of the panels with lots of long line segments:
 #  use a different panel merit measure- pclen:
@@ -52,7 +53,7 @@ parcoord.bg(state.x77, order.endlink(state.m), state.col)
 mins <- apply(state.x77,2,min)
 ranges <- apply(state.x77,2,max) - mins
 state.m <- -colpairs(scale(state.x77,mins,ranges), pclen)
-parcoord.bg(state.x77, order.endlink(state.m), dmat.color(state.m))
+cparcoord(state.x77, order.endlink(state.m), dmat.color(state.m))
 
 
 

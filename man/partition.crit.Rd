@@ -50,14 +50,14 @@ m <- -colpairs(scale(bank[,-1]), partition.crit,gfun=gave,groups=bank[,1])
 # pairs with high m are near the diagonal. Panels shown
 # in pink have the highest amount of group homogeneity, as measured by 
 # gave.
-pairs.bg(bank[,-1],order=order.single(m), panel.colors=dmat.color(m),
+cpairs(bank[,-1],order=order.single(m), panel.colors=dmat.color(m),
 gap=.3,col=c("purple","black")[bank[,"Status"]+1],
 pch=c(5,3)[bank[,"Status"]+1])
 
 # Try  a different measure
 m <- -colpairs(scale(bank[,-1]), partition.crit,gfun=diameter,groups=bank[,1])
 
-pairs.bg(bank[,-1],order=order.single(m), panel.colors=dmat.color(m),
+cpairs(bank[,-1],order=order.single(m), panel.colors=dmat.color(m),
 gap=.3,col=c("purple","black")[bank[,"Status"]+1],
 pch=c(5,3)[bank[,"Status"]+1])
 

@@ -44,7 +44,7 @@ inter-object distances.
 \author{ Catherine B. Hurley}
 
 
-\seealso{ \code{\link{colpairs}}, \code{\link{pairs.bg}}, \code{\link{order.single}}}
+\seealso{ \code{\link{colpairs}}, \code{\link{cpairs}}, \code{\link{order.single}}}
 \examples{
 x <- runif(20)
 y <- runif(20)
