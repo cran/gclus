@@ -17,20 +17,20 @@ pcglen(x, y)
 \item{x}{is a numeric vector. }
  \item{y}{is a numeric vector. }
 }
-\details{Usually, the data is standardized prior to using these functions.}
-
+\details{
 \code{pclen} computes the total line length in a parallel coordinate plot
 of x and y.
 
 \code{pcglen} computes the average (per object) line length in a parallel coordinate plot
 where all pairs of objects are connected.
 
-
+Usually, the data is standardized prior to using these functions.
 }
-\value {The panel measure is returned.
+\value{The panel measure is returned.
 }
-\references{Hurley, Catherine B.  ``Clustering Visualisations of Multidimensional 
-Data'', to appear in JCGS. }
+\references{Hurley, Catherine B.  \dQuote{Clustering Visualisations of Multidimensional 
+Data}, Journal of Computational and Graphical Statistics,
+vol. 13, (4), pp 788-806, 2004. }
 \author{ Catherine B. Hurley }
 %\note{ ~~further notes~~ }
 

@@ -28,7 +28,7 @@ values. The function \code{cfun} is applied to the vector or matrix of
 \value{
   The result of applying \code{cfun}.
 }
-\references{ See Gordon, A. D. (1999). {\it Classification}. Second Edition. London:
+\references{ See Gordon, A. D. (1999). \emph{Classification}. Second Edition. London:
      Chapman and Hall / CRC }
 \author{ Catherine B. Hurley}
 

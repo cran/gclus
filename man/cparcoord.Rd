@@ -28,8 +28,9 @@ recycled as necessary for each observation.  }
   If \code{panel.colors} is a matrix and \code{order} is supplied, \code{panel.colors} is 
   reordered.}
 
-\references{Hurley, Catherine B.  ``Clustering Visualisations of Multidimensional 
-Data'', to appear in JCGS. }
+\references{Hurley, Catherine B.  \dQuote{Clustering Visualisations of Multidimensional 
+  Data}, Journal of Computational and Graphical Statistics,
+  vol. 13, (4), pp 788-806, 2004. }
 \author{ Catherine B. Hurley }
 
 \seealso{\code{\link{cpairs}}, \code{\link{parcoord}},

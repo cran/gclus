@@ -46,17 +46,18 @@ when two ordered clusters are merged, the new cluster is formed by placing the
 most similar endpoints of the joining clusters adjacent to each other.
 \code{order.hclust(m,method="single")} is equivalent to 
 \code{order.single} when \code{clusters} is \code{NULL}.
-The default method of \code{hclust} is "complete", see \code{\link{hclust}}} for other 
+The default method of \code{hclust} is "complete", see \code{\link{hclust}} for other 
 possibilities.
 
 }
 \value{A permutation of the objects represented by \code{merit} is returned.
 }
-\references{Hurley, Catherine B.  ``Clustering Visualisations of Multidimensional 
-Data'', to appear in JCGS.
+\references{Hurley, Catherine B.  \dQuote{Clustering Visualisations of Multidimensional 
+Data}, Journal of Computational and Graphical Statistics,
+vol. 13, (4), pp 788-806, 2004. 
 
 Gruvaeus, G. and Wainer, H. (1972),
-``Two Additions to Hierarchical Cluster Analysis",
+\dQuote{Two Additions to Hierarchical Cluster Analysis},
  British Journal of Mathematical and Statistical Psychology, 25, 200-206.
  }
 \author{ Catherine B. Hurley }

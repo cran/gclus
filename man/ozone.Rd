@@ -29,7 +29,8 @@ Upland, CA, east of Los Angeles.
 
 \usage{data(ozone)}
 \source{Breiman, L and  Friedman, J.  (1985),
- ``Estimating Optimal Transformations for Multiple Regression and Correlation'',
+ \dQuote{Estimating Optimal Transformations for Multiple 
+Regression and Correlation},
  \emph{Journal of the American Statistical Association}, 80,  580-598.
     }
 \keyword{datasets}

@@ -26,11 +26,12 @@ the object in A placed adjacent to an object from B.
 }
 \value{A permutation of the objects represented by \code{dis} is returned.
 }
-\references{Hurley, Catherine B.  ``Clustering Visualisations of Multidimensional 
-Data'', to appear in JCGS.
+\references{Hurley, Catherine B.  \dQuote{Clustering Visualisations of Multidimensional 
+Data}, Journal of Computational and Graphical Statistics,
+vol. 13, (4), pp 788-806, 2004.
 
 Gruvaeus, G. and Wainer, H. (1972),
-``Two Additions to Hierarchical Cluster Analysis",
+\dQuote{Two Additions to Hierarchical Cluster Analysis},
  British Journal of Mathematical and Statistical Psychology, 25, 200-206.
  }
 \author{ Catherine B. Hurley }
