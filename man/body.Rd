@@ -66,7 +66,7 @@ Heinz, G., Peterson, L.J., Johnson, R.W. and Kerk, C.J. (2003),
 \emph{Journal of Statistics Education }, 11.
 
 }
-\reference{
+\references{
 The data file is taken from 
 \url{http://www.amstat.org/publications/jse/datasets/body.dat}
 This information file is based on

@@ -40,7 +40,7 @@ memship2clus(memship)
 \arguments{
   \item{vec}{is a vector. }
   \item{n}{is an integer > 1. }
- \item{m} {is a matrix.}
+ \item{m}{is a matrix.}
  \item{clusters}{is a list whose ith element contains the indices of the 
  objects belonging to the ith cluster.}
 \item{off}{is an integer specifying the distance above the main (0) diagonal.}

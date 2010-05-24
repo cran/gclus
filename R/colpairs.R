@@ -65,7 +65,7 @@ star <- function(x,y,...){
 # x and y, where group contains the object memberships.
 
 sil <- function(x,y,groups,...){
-   require(cluster)
+  # require(cluster)
    igroups <- unclass(factor(groups))
    d <- dist(cbind(x,y),...)
    s <- silhouette(igroups,d)
@@ -75,7 +75,7 @@ sil <- function(x,y,groups,...){
 # Computes the agglomerative coefficient, from agnes.
 
 ac <- function(x,y,...){
-   require(cluster)
+#   require(cluster)
    ag <- agnes(cbind(x,y),keep.diss=FALSE,keep.data=FALSE,...)
    ag$ac
 }

@@ -1,12 +1,17 @@
 \name{reorder.hclust}
 \alias{reorder.hclust}
+%\name{reorder}
+%\docType{methods}
+%\alias{reorder,hclust}
+
 \title{Reorders object order of hclust, keeping objects within a cluster
 contiguous to each other. }
 \description{
 Reorders objects so that  nearby object pairs are adjacent.
 }
 \usage{
-reorder.hclust(x,dis,...)
+%reorder.hclust(x,dis,...)
+\method{reorder}{hclust}(x,dis,...)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -74,11 +79,6 @@ plotcolors(cmat[hc1$order,hc1$order], rlabels=labels(eurodist)[hc1$order])
 
 layout(matrix(1,1))
 par(op)
-
-}
-
-
-
 
 }
 \keyword{multivariate }

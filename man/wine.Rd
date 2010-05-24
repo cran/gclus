@@ -36,7 +36,7 @@ Forina, M. et al, PARVUS - An Extendible Package for Data
        and Food Analysis and Technologies, Via Brigata Salerno, 
        16147 Genoa, Italy.
 }
-\reference{
+\references{
 Blake, C.L. and Merz, C.J. (1998), UCI Repository of machine learning databases, \\
 \url{http://www.ics.uci.edu/~mlearn/MLRepository.html}. Irvine, CA: University of California, Department of
 Information and Computer Science. 
