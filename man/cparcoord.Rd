@@ -8,7 +8,8 @@ may be reordered and panels colored in the display. It is a modified
 version of \code{parcoord {MASS}}.
 }
 \usage{
-cparcoord(data, order = NULL, panel.colors = NULL, col = 1, lty = 1, horizontal = FALSE, mar = NULL, ...)
+cparcoord(data, order = NULL, panel.colors = NULL, col = 1, lty = 1, 
+horizontal = FALSE, mar = NULL, ...)
 }
 
 \arguments{

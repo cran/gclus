@@ -7,7 +7,8 @@ This function draws a scatterplot matrix of data. Variables
 may be reordered and panels colored in the display.
 }
 \usage{
-cpairs(data, order = NULL, panel.colors = NULL, border.color = "grey70", show.points = TRUE, ...)
+cpairs(data, order = NULL, panel.colors = NULL, border.color = "grey70", 
+show.points = TRUE, ...)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
