@@ -38,11 +38,7 @@ Forina, M. et al, PARVUS - An Extendible Package for Data
 }
 \references{
 Blake, C.L. and Merz, C.J. (1998), UCI Repository of machine learning databases, \\
-\url{http://www.ics.uci.edu/~mlearn/MLRepository.html}. Irvine, CA: University of California, Department of
+\url{https://archive.ics.uci.edu/datasets}. Irvine, CA: University of California, Department of
 Information and Computer Science. 
-
-The database does not list the variable names. These were
-located at 
-\url{http://www.radwin.org/michael/projects/learning/about-wine.html}.
 }
 \keyword{datasets}

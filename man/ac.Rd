@@ -31,10 +31,7 @@ sil(x, y, groups, ...)
 }
 \references{ Kaufman, L. and Rousseeuw, P.J. (1990). Finding Groups in Data: An Introduction to Cluster Analysis . Wiley, New York.  }
 \author{ Catherine B. Hurley}
-%\note{ ~~further notes~~ }
-
-
-\seealso{  \code{\link{agnes}}, \code{\link{silhouette}}, \code{\link{dist}}.  }
+\seealso{ \code{\link[cluster]{agnes}}, \code{\link[cluster]{silhouette}}, \code{\link[stats]{dist}} }
 \examples{
 x <- runif(20)
 y <- runif(20)

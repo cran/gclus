@@ -34,7 +34,7 @@ recycled as necessary for each observation.  }
   vol. 13, (4), pp 788-806, 2004. }
 \author{ Catherine B. Hurley }
 
-\seealso{\code{\link{cpairs}}, \code{\link{parcoord}},
+\seealso{\code{\link{cpairs}}, \code{\link[MASS]{parcoord}},
 \code{\link{dmat.color}}, \code{\link{colpairs}}, \code{\link{order.endlink}}.}
 \examples{
 data(state)

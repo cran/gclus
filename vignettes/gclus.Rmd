@@ -134,4 +134,7 @@ plotcolors(cmat[hc1$order,hc1$order], rlabels=labels(eurodist)[hc1$order])
 
 ```
 
+## More algorithms
+
+For a wide selection of hclust-based ordering algorithms, see package `DendSer`.
 
